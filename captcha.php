@@ -126,7 +126,7 @@ for ($i = 0; $i < 5; $i++) {
 // Limpando memória
 //imagedestroy($image);
 
-$temp_folder = 'temp/';
+$temp_folder = 'temp';
 
 // Criando pasta temporária, se ela não existir
 if (!file_exists($temp_folder)) {
@@ -134,7 +134,7 @@ if (!file_exists($temp_folder)) {
 }
 
 // Gerando nome do arquivo temporário
-$temp_file = $temp_folder . 'captcha_' . time() . '.png';
+$temp_file = $temp_folder . '/captcha_' . time() . '.png';
 // Gravando o arquivo em uma Sessão
 
 $_SESSION['temp_file'] = $temp_file;
