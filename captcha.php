@@ -1,9 +1,11 @@
 <?php
-//Desenvoldido por Elias Sant'Anna em fevereiro de 2023
+// Desenvoldido por Elias Sant'Anna em fevereiro de 2023
+// https://github.com/eliasfsa/captcha
 
 
 session_start();
 
+// Um arquivo de log é criado no mesmo diretório da aplicação para fins de debug
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
@@ -47,6 +49,7 @@ $font_path = realpath('arial.ttf');
 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 $characters_length = strlen($characters);
 $random_string = '';
+// Quantidade de caracteres gerados pelo sistema
 $length = 5;
 for ($i = 0; $i < $length; $i++) {
   $random_string .= $characters[rand(0, $characters_length - 1)];
