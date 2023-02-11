@@ -25,6 +25,13 @@ if (isset($_POST['captcha'])) {
 		  
 		}
 }
+else{
+if (file_exists($_SESSION['temp_file'])) {
+			// Apaga a imagem
+			unlink($_SESSION['temp_file']);
+		}
+		
+}
 
 
 // Tamanho da imagem
