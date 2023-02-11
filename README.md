@@ -1,7 +1,7 @@
 # captcha
-captcha em PHP
-Esse script, você pode usar tanto em aplicações comerciais, quanto para uso pessoal.
-Por favor, mantenha no script a fonte github
+
+Esse script em PHP, você pode usar tanto em aplicações comerciais, quanto para uso pessoal.
+Por favor, mantenha no script a fonte github: https://github.com/eliasfsa/captcha
 
 Este script gera uma imagem de CAPTCHA com uma string aleatória de 5 caracteres, composta por letras e números. As letras e números são desenhados com tamanhos variados, enquanto o fundo é preenchido com linhas aleatórias, curvas, pontos, etc. A string aleatória é armazenada na sessão e usada para verificar a entrada do usuário ao enviar o formulário.
 
@@ -18,6 +18,8 @@ $font_path = realpath('arial.ttf');
 Nessa variável $temp_folder, fica o diretório onde será armazenada a imagem gerada pelo CAPTCHA. Você é livre para definir o local dessa variável.
 Caso não tenha o diretório, ele será criada no mesmo diretório do script. Lembre-se de que esse diretório tem que ter permissão de escrita.
 $temp_folder = 'temp';
+
+O captcha é case sensitive. Letras maiúsculas e mínusculas são diferenciadas.
 
 Assim que for submetido o formulário a imagem irá desaparecer do diretório onde foi armazenada para não ficar enchendo a pasta com arquivos desnecessários.
 
